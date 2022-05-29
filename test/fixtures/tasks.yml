@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task: MyString
+  finish_by: 2022-05-28 16:28:26
+
+two:
+  task: MyString
+  finish_by: 2022-05-28 16:28:26
