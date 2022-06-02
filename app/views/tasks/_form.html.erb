@@ -11,14 +11,21 @@
     </div>
   <% end %>
 
-  <div class="form-group" style="margin-bottom: 5px">
-    <%= form.label :task, style: "display: block; font-weight:bold" %>
+  <div style="margin-bottom: 10px">
+    <%= form.label :task, style: "display: block; font-weight:bold; display:inline" %>:
     <%= form.text_field :task, class:"form-control" %>
   </div>
-  <div>
-    <%= form.label :finish_by, style: "display: block; font-weight:bold" %>
+
+  <div style="margin-bottom: 10px">
+    <%= form.label :finish_by, style: "display: block; font-weight:bold; display:inline" %>:
     <%= form.datetime_field :finish_by, class:"form-control" %>
   </div>
+
+  <div>
+    <%= form.label :description, style: "display: block; font-weight:bold; display:inline" %>:
+    <%= form.text_field :description, class:"form-control" %>
+  </div>
+
   <div style="margin-top:10px">
     <%= form.submit class:"btn btn-outline-success btn-small" %>
   </div>

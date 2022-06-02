@@ -1,9 +1,6 @@
-<h1>Edit Task</h1>
+<h1 style="display:inline">Edit Task
+<div style="float:right;"><%= link_to "Back", tasks_path, class:"btn btn-secondary btn-sm" %></div></h1>
 
+<div style="margin-top: 10px">
 <%= render "form", task: @task %>
-
-<br>
-
-<div>
-  <%= link_to "Task List", tasks_path %>
 </div>
