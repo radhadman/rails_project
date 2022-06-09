@@ -1,14 +1,17 @@
 <div id="<%= dom_id task %>">
 
-  <strong>Title:</strong>
-    <%= task.task %>
+  <h4 style="display:inline"><strong>Title:</strong></h4>
+    <p style="display:inline; font-size: 24px;"><%= task.task %></p>
+    <br>
 
-  <p>
+
     <strong>Details:</strong>
-    <%= task.details %>
-  </p>
+    <% task.details %>
+    <br>
+
 
     <strong>Finish by:</strong>
     <%= task.finish_by %>
+
 
 </div>

@@ -1,26 +1,30 @@
 <p style="color: green"><%= notice %></p>
 
-<h1 style="display:inline">Task List
+<h1 style="display:inline">Task List Manager
 <div style="float:right"><%= link_to "Create Task", new_task_path, class:"btn btn-outline-dark" %></div></h1>
-<hr style="margin-bottom: 30px">
+<hr style="margin-bottom: 20px; border: 5px solid rgb(250, 150, 0);">
 
 
-<div id="tasks" style="margin-bottom: 50px;">
+<div>
   <% if !@tasks.exists? %>
   <p>There are no current tasks.</p>
 
   <% else %>
   <% @tasks.each do |task| %>
-  <div class="alert alert-dark" style="margin-bottom: 10px; padding: 10px;">
-    <%= render task %>
 
-        </div>
-<p style="float:left;">
+
+  <div style="margin-bottom: 5px;">
+    <%= render task %>
+</div>
+<hr style="margin-top: 5px; margin-bottom: 10px;">
+
+
     <%= link_to "View", task_path(task), class:"btn btn-outline-primary btn-sm" %>
    <%= link_to "Edit", edit_task_path(task), class:"btn btn-outline-secondary btn-sm" %>
-<%= button_to 'Delete', task, method: :delete, form: {style: 'display:inline;'}, class: "btn btn-outline-danger btn-sm", style: "float:right" %>
-</p>
+  <%= button_to 'Delete', task, method: :delete, form: {style: 'display:inline;'}, class: "btn btn-outline-danger btn-sm", style: "float:right" %>
+<br><br>
+
+<% end %>
+<% end %>
 
 </div>
-<% end %>
-  <% end %>
