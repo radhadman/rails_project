@@ -2,8 +2,13 @@
 
 <h1 style="display:inline">Task List Manager
 <div style="float:right"><%= link_to "Create Task", new_task_path, class:"btn btn-outline-dark" %></div></h1>
-<hr style="margin-bottom: 20px; border: 5px solid rgb(250, 150, 0);">
+<hr style="margin-bottom: 10px; border: 5px solid #cc1100">
 
+<div style="text-align:center; background-color: lightgrey">
+  <hr>
+<h3>Tasks</h3>
+<hr>
+</div>
 
 <div>
   <% if !@tasks.exists? %>
