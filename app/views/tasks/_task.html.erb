@@ -1,17 +1,28 @@
 <div id="<%= dom_id task %>">
 
-  <h4 style="display:inline"><strong>Title:</strong></h4>
-    <p style="display:inline; font-size: 24px;"><%= task.task %></p>
-    <br>
+  <h3><strong><%= task.task %></strong></h3>
+
+    <strong style="display:inline">Details:</strong>
+    <%= simple_format(task.details) %>
+
+    <p style="font-size: 14px; display:inline">Finish by
+    <% # task.finish_by.strftime("%A, %b %d, %Y at %l:%M %p") %>
+    <strong><%= task.finish_by %></strong></p>
 
 
-    <strong>Details:</strong>
-    <%= task.details %>
-    <br>
-
-<br>
-    <strong>Finish by:</strong>
-    <%= task.finish_by.strftime("%A, %b %d, %Y at %l:%M %p") %>
-
-
-</div>
+    <!-- <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Details</th>
+      <th scope="col">Finish By</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= task.task %></td>
+      <td><%= simple_format(task.details) %></td>
+      <td><%= task.finish_by %></td>
+  </tbody>
+</table>
+</div> -->

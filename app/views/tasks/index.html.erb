@@ -1,22 +1,24 @@
 <p style="color: green"><%= notice %></p>
 
-<h1 style="display:inline">Task List Manager
+<h1 style="display:inline">Task Manager
 <div style="float:right"><%= link_to "Create Task", new_task_path, class:"btn btn-outline-dark" %></div></h1>
 <hr style="margin-bottom: 10px; border: 5px solid #cc1100">
 
+<br>
 <div style="text-align:center; background-color: lightgrey">
-  <hr>
-<h3>Tasks</h3>
+<hr>
+<h2 style="font-family:verdana;"><strong>To Do List</strong></h2>
 <hr>
 </div>
+<br>
 
-<div>
+
+<div id="task">
   <% if !@tasks.exists? %>
   <p>There are no current tasks.</p>
 
   <% else %>
   <% @tasks.each do |task| %>
-
 
   <div style="margin-bottom: 5px;">
     <%= render task %>
@@ -24,9 +26,10 @@
 <hr style="margin-top: 5px; margin-bottom: 10px;">
    <%= link_to "Edit", edit_task_path(task), class:"btn btn-outline-primary btn-sm" %>
   <%= button_to 'Delete', task, method: :delete, form: {style: 'display:inline;'}, class: "btn btn-outline-danger btn-sm", style: "float:right" %>
-<br><br>
+<br><br><br>
 
 <% end %>
 <% end %>
 
 </div>
+<br><br><br>
