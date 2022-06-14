@@ -3,8 +3,8 @@
   <h3><strong>Task: </strong><%= task.task %></h3>
 
     <% if task.details != "" %>
-    <strong style="display:inline">Details:</strong>
-    <%= simple_format(task.details) %>
+   <strong>Details:</strong>
+    <%= simple_format(task.details, html_options = {style: "display:inline"}) %><br><br>
     <% else %>
     <% end %>
 
