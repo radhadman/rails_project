@@ -1,9 +1,12 @@
 <div id="<%= dom_id task %>">
 
-  <h3><strong><%= task.task %></strong></h3>
+  <h3><strong>Task: </strong><%= task.task %></h3>
 
+    <% if task.details != "" %>
     <strong style="display:inline">Details:</strong>
     <%= simple_format(task.details) %>
+    <% else %>
+    <% end %>
 
     <p style="font-size: 14px; display:inline">Finish by
     <% # task.finish_by.strftime("%A, %b %d, %Y at %l:%M %p") %>

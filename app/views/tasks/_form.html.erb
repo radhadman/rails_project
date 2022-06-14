@@ -13,17 +13,17 @@
 
   <div style="margin-bottom: 10px; width:33%;">
     <%= form.label :task, style: "display: inline-block; font-weight:bold;" %>:
-    <%= form.text_field :task, class:"form-control" %>
+    <%= form.text_field :task, class:"form-control", required: true %>
   </div>
 
-  <div style="margin-bottom: 10px;">
+  <div style="margin-bottom: 10px; width:33%;">
     <%= form.label :details, style: "display: inline-block; font-weight:bold" %>:
     <%= form.text_area :details, class:"form-control", style:"height: 6em;" %>
   </div>
 
   <div style="width:33%;">
     <%= form.label :finish_by, style: "display: inline-block; font-weight:bold" %>:
-    <%= form.datetime_field :finish_by, class:"form-control"%>
+    <%= form.datetime_field :finish_by, class:"form-control", required: true%>
   </div>
 
   <div style="margin-top:10px">
