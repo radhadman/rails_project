@@ -1,9 +1,11 @@
+
+
 <div id="<%= dom_id task %>">
 
 
     <table class="table table-striped table-light" style="background-color: #dcdcdc">
   <tr>
-    <th scope="col" style="text-align:center;">Task</th>
+    <th scope="col" style="text-align:center; width: 20%">Task</th>
     <td><%= task.task %></td>
     </tr>
 
@@ -15,13 +17,12 @@
 
     <% if task.details != "" %>
     <td>
-      <%= simple_format(task.details, html_options = {style: "display:inline"}) %><br>
+      <%= simple_format(task.details, html_options={style: "display:inline;"}) %>
       <% else %>
       <% end %>
       </td>
-      </tr>
 
 </table>
 <p style="font-size: 14px; display:inline;">Finish by
 
-<strong><%= task.finish_by.strftime("%A, %b %d, %Y at %l:%M %p") %></strong></p><br>
+<strong><%= task.finish_by.strftime("%A, %b %d, %Y at %l:%M %p") %></strong></p>
