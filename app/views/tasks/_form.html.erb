@@ -13,12 +13,12 @@
 
   <div style="margin-bottom: 10px; width:33%;">
     <%= form.label :task, style: "display: inline-block; font-weight:bold;" %>:
-    <%= form.text_field :task, class:"form-control", required: true %>
+    <%= form.text_field :task, maxlength: 50, class:"form-control", required: true %>
   </div>
 
-  <div style="margin-bottom: 10px; width:33%;">
+  <div style="margin-bottom: 10px;">
     <%= form.label :details, style: "display: inline-block; font-weight:bold" %>:
-    <%= form.text_area :details, class:"form-control", style:"height: 6em;" %>
+    <%= form.text_field :details, maxlength: 200, class:"form-control" %>
   </div>
 
   <div style="width:33%;">
